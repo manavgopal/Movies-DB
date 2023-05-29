@@ -1,0 +1,19 @@
+.button1 {
+  margin: 10px;
+  height: 20px;
+  font-size: 24px;
+}
+
+.button2 {
+  margin: 10px;
+  height: 20px;
+  font-size: 24px;
+}
+
+.redirect-buttons {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24px;
+}

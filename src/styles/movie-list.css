@@ -1,6 +1,7 @@
 .movie-list {
+  margin-top: 20px;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  background-color: #243240;
+  justify-content: space-around;
 }

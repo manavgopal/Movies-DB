@@ -1,7 +1,12 @@
 import "./App.css";
-import { Navbar, MovieList } from "./components";
+import { Navbar } from "./components";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import About from "./pages/About";
+import Movie from "./pages/Movie";
+import MovieDetails from "./pages/MovieDetails";
+import Home from "./pages/Home";
 
 const API_BASE_URL = "http://www.omdbapi.com";
 
@@ -30,7 +35,19 @@ function App() {
         inputValue={inputValue}
         setInputValue={setInputValue}
       />
-      <MovieList isLoading={isLoading} movieList={movies} />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/movie-details"
+            element={<Movie isLoading={isLoading} movieList={movies} />}
+          />
+          <Route path="/movie-details/:id" element={<MovieDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </BrowserRouter>
+
+      {/* <MovieList isLoading={isLoading} movieList={movies} /> */}
     </div>
   );
 }

@@ -4,12 +4,21 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: #003333;
 }
 
 .search-bar {
   outline: none;
   border: none;
+  padding: 6px;
+  font-size: 17px;
   background: none;
   background-color: #182634;
   color: white;
+}
+
+.heading {
+  padding: 0;
+  margin: 0;
+  font-size: x-large;
 }
